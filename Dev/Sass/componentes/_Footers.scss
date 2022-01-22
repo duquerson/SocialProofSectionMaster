@@ -1,0 +1,19 @@
+.Autor {
+    margin-top: 2rem;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.8;
+    font-size: var(--body_text);
+
+    .Autor__Titulo {
+        margin-bottom: 1rem;
+        font-size: var(--body_text);
+
+
+        a{
+            text-decoration: none;
+            color: var(--color_primario_Soft_Pink);
+        }
+
+    }
+}

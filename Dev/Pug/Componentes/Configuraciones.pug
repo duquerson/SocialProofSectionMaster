@@ -1,0 +1,28 @@
+-var Titulo = "10,000+ of our users love our products."
+-var Parrafo = "We only provide great products combined with excellent customer service. See what our satisfied customers are saying about our services."
+-var TituloTarjeta = ["Colton Smith", "Irene Roberts", "Anne Wallace"]
+-var ParrafoTarjeta = ["We needed the same printed design as the one we had ordered a week prior. Not only did they find the original order, but we also received it in time. Excellent", "Customer service is always excellent and very quick turn around. Completely delighted with the simplicity of the purchase and the speed of delivery.", "Put an order with this company and can only praise them for the very high standard. Will definitely use them again and recommend them to everyone!"]
+-var ImagenTarjeta = ["image-colton.jpg", "image-irene.jpg", "image-anne.jpg"]
+-var SubtituloTarjeta = "Verified Buyer"
+-var TextoPuntaje = ["Rated 5 Stars in Reviews", "Rated 5 Stars in Report Guru", "Rated 5 Stars in BestTech"]
+-var EstrellaPuntaje = "icon-star.svg"
+mixin Css
+    title Social_proof_section | Frontend Mentor
+    link(rel='shortcut icon' href='../Img/favicon-32x32.png' type='image/x-icon')
+    // link(rel="stylesheet" href="../Css/Normalize.css")
+    link(rel='stylesheet' href='../Css/Styles.css')
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap" rel="stylesheet")
+mixin Estrella(Imagen, Titulo)
+    div.Puntaje__Estrella
+        -for (var x = 0; x < 5; x++)
+            img(src='../Img/'+Imagen alt='start')
+    div.Puntaje__Texto
+        h2=Titulo
+mixin Tarjeta(ImagenTarjeta, TituloTarjeta, SubtituloTarjeta, ParrafoTarjeta)
+    img(src='../Img/'+ImagenTarjeta alt='Photo of Person')
+    div.Nombre
+        h3=TituloTarjeta
+        span=SubtituloTarjeta
+    p "#{ParrafoTarjeta}"

@@ -1,0 +1,80 @@
+.Social__Puntaje {
+    margin-top: 4.9rem;
+    height: 26.8rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    .Puntaje {
+        width: 32.9rem;
+        height: 7.9rem;
+        display: flex;
+        flex-direction: column;
+        @include ModeloCaja1;
+
+
+    &__Estrella {
+        text-align: center;
+
+
+        img{
+            padding: 0 0.4rem;
+            margin: 1.3rem 0;
+        }
+
+
+    }
+
+
+    &__Texto h2 {
+        margin: 0;
+        font-weight: 700;
+        text-align: center;        
+        }
+    }
+
+    
+}
+
+@media screen and (min-width: 1024px){
+
+    .Social__Puntaje {
+        grid-area: Estrellas;
+        height: 19.26rem;
+        align-items: normal;
+
+        .Puntaje {
+            width: 44.7rem;
+            height: 5.9rem;
+            flex-direction: row;
+            &__Estrella {
+                margin: 2rem 3.4rem;
+                
+                img {
+                    margin: 0;
+                }
+            }
+            
+            &__Texto h2 {
+                margin: 2rem 0;
+                font-weight: 700;        
+                }
+            }
+            
+        }
+        .Puntaje__Estrella--1{
+            align-self: flex-start;
+            transition: all 0.3s ease-in-out;
+        }
+        .Puntaje__Estrella--2{
+            align-self: center;
+            transition: all 0.3s ease-in-out;
+        }
+        .Puntaje__Estrella--3{
+            align-self: flex-end;
+            transition: all 0.3s ease-in-out;
+        }
+}
+

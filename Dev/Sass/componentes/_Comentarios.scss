@@ -1,0 +1,92 @@
+.Social__Comentario {
+    height: 77.7rem;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+
+    .Tarjeta {
+        width: 32.9rem;
+        height: 25rem;
+        display: grid;
+        grid-template-columns: 1fr 10fr;
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: 
+        'img      titulos'
+        'parrafo parrafo';
+        @include ModeloCaja2;
+
+
+    img {
+        border-radius: 50%;
+        height: 4.3rem;
+        width: 4.3rem;
+        margin-top: 3.9rem;
+        margin-left: 3.5rem;
+        grid-area: img;
+    }
+
+
+    .Nombre {
+        margin-left: 2.3rem;
+        margin-top: 4rem;
+        grid-area: titulos;
+
+
+        h3 {
+            margin-top: 0;
+            margin-bottom: 0.8rem;
+            color: var(--color_secundario_White);
+        }
+
+
+        span {
+            color: var(--color_primario_Soft_Pink);
+        }
+    }
+
+
+    p {
+        grid-area: parrafo;
+        font-weight: 400;
+        margin: 0 3.5rem 0 3.5rem;
+        text-align: left;
+        font-size: var(--body_text);
+        color: var(--color_secundario_White);
+    }
+
+
+    }
+
+    
+}
+@media screen and (min-width: 1024px){
+
+
+    .Social__Comentario {
+        grid-area: Comentarios;
+        flex-direction: row;
+        height: 26.9rem;
+        width: 111.2rem;
+
+        .Tarjeta {
+            width: 35.2rem;
+            height: 23.7rem;
+        
+        }
+
+        .Tarjeta--1 {
+            align-self: flex-start;
+        }
+
+        .Tarjeta--2 {
+            align-self: center;
+        }
+
+        .Tarjeta--3{
+            align-self: flex-end;
+        }
+    }
+}

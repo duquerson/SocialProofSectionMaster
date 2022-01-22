@@ -1,0 +1,77 @@
+/*
+1.pocicionamiento
+2.modelo de caja
+3.tipografia
+4.visuales
+5.misalaneos o otros.
+*/
+
+:root {
+    /*
+    *variables of proyect
+    */
+    // * Colors
+    // * Primary
+    --color_primario_Very_Dark_Magenta: hsl(300, 43%, 22%);
+    --color_primario_Soft_Pink: hsl(333, 80%, 67%);
+    
+    // * Neutral
+    
+    --color_secundario_Dark_Grayish_Magenta: hsl(303, 10%, 53%);
+    --color_secundario_Light_Grayish_Magenta: hsl(300, 24%, 96%);
+    --color_secundario_White: hsl(0, 0%, 100%);
+    // * size text and font
+    --body_text: 1.5rem;
+    --font: 'Spartan', sans-serif;
+}
+@each $Header, $Size in (h2:1.5rem, h3:1.5rem) {
+    #{$Header} {
+        font-size: $Size;
+    }
+}
+
+
+@mixin ModeloCaja1 {
+    border-radius: 1.1rem;
+    background-color: var(--color_secundario_Light_Grayish_Magenta);
+    color: var(--color_primario_Very_Dark_Magenta);
+}
+
+
+@mixin ModeloCaja2 {
+    border-radius: 1.1rem;
+    font-weight: 500;
+    background-color: var(--color_primario_Very_Dark_Magenta);
+}
+
+
+html {
+    /*
+    * ajuste para uso del rem 1 rem = 10px para tamaño de fuente
+    */
+    font-size: 62.5%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    /* 
+    *  ajuste tamaño de fuente y box model
+    */
+    font-size: var(--body_text);
+    font-family: var(--font);
+    background:no-repeat top left url("../Img/bg-pattern-top-mobile.svg"), url('../Img/bg-pattern-bottom-mobile.svg') no-repeat bottom right;
+    transition: all 0.2s ease-in-out;
+}
+
+@media screen and (min-width: 600px){
+
+    
+    body {
+    background:no-repeat top left url("../Img/bg-pattern-top-desktop.svg"), url('../Img/bg-pattern-bottom-desktop.svg') no-repeat bottom right;
+    transition: all 0.2s ease-in-out;
+}
+
+}

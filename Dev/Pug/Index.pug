@@ -1,0 +1,26 @@
+include Componentes/Configuraciones.pug
+doctype html
+html(lang='es')
+    include Componentes/Heads.pug
+    body
+        main.Container
+            div.Container__Social
+                section.Social__Encabezado
+                        h1=Titulo 
+                        p=Parrafo
+                section.Social__Puntaje
+                    section.Puntaje(class='Puntaje__Estrella--1')
+                        +Estrella(EstrellaPuntaje, TextoPuntaje[0])
+                    section.Puntaje(class='Puntaje__Estrella--2')
+                        +Estrella(EstrellaPuntaje, TextoPuntaje[1])
+                    section.Puntaje(class='Puntaje__Estrella--3')    
+                        +Estrella(EstrellaPuntaje, TextoPuntaje[2])
+                section.Social__Comentario
+                    div.Tarjeta(class='Tarjeta--1')
+                        +Tarjeta(ImagenTarjeta[0],TituloTarjeta[0],SubtituloTarjeta,ParrafoTarjeta[0])
+                    div.Tarjeta(class='Tarjeta--2')
+                        +Tarjeta(ImagenTarjeta[1],TituloTarjeta[1],SubtituloTarjeta,ParrafoTarjeta[1])
+                    div.Tarjeta(class='Tarjeta--3')
+                        +Tarjeta(ImagenTarjeta[2],TituloTarjeta[2],SubtituloTarjeta,ParrafoTarjeta[2])
+            include Componentes/footers.pug
+            
